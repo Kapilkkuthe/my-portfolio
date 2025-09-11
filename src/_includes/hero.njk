@@ -1,0 +1,99 @@
+<section id="home" class="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 transition-colors">
+  <div class="text-center px-6 max-w-3xl">
+    <!-- Name -->
+    <h1 class="text-4xl md:text-6xl font-bold text-slate-800 dark:text-gray-100 mb-4">
+      Kapil Kuthe
+    </h1>
+
+    <!-- Typing Tagline -->
+    <p id="tagline" class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-6 h-8">
+      <!-- text will type here -->
+    </p>
+
+    <!-- Rotating Roles -->
+    <div class="text-2xl md:text-3xl font-semibold text-amber-600 h-10 mb-6">
+      <span id="role-rotator" class="inline-block"></span>
+    </div>
+
+    <!-- Self Intro -->
+    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+      I’m a <strong>Backend Developer</strong> passionate about building scalable, secure, and high-performance 
+      systems in the <strong>fintech space</strong>. From <strong>real-time stock data APIs</strong> to 
+      <strong>banking microservices</strong>, I enjoy solving complex problems with 
+      <strong>Go</strong>, <strong>Java Spring Boot</strong>, and modern tools like 
+      <strong>Redis</strong>, <strong>PostgreSQL</strong>, and <strong>Docker</strong>. 
+      Always <em>curious</em>, I thrive on learning and experimenting with new technologies to craft 
+      clean, reliable, and future-ready solutions.
+    </p>
+
+    <!-- Badges -->
+    <div class="flex justify-center flex-wrap gap-3 mb-8">
+      <span class="px-4 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Backend</span>
+      <span class="px-4 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Fintech</span>
+      <span class="px-4 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Curious</span>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="space-x-4 flex flex-wrap justify-center gap-4">
+      <a href="#projects" class="px-6 py-3 bg-amber-500 text-white rounded-lg shadow hover:bg-amber-600 transition">View Projects</a>
+      <a href="#contact" class="px-6 py-3 border border-amber-500 text-amber-600 rounded-lg hover:bg-amber-50 dark:hover:bg-gray-800 transition">Contact Me</a>
+      <a href="/assets/Kapil_Kuthe_Resume.pdf" download class="px-6 py-3 bg-gray-800 text-white rounded-lg shadow hover:bg-gray-700 dark:bg-gray-200 dark:text-gray-900 dark:hover:bg-gray-300 transition">Download Resume</a>
+    </div>
+  </div>
+
+  <!-- Typing + Rotator Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Typing effect with blinking cursor
+      const taglineText = "Brewing Secure APIs for the Future of Fintech ☕";
+      const taglineEl = document.getElementById("tagline");
+      let i = 0;
+
+      function typeTagline() {
+        if (i < taglineText.length) {
+          taglineEl.textContent += taglineText.charAt(i);
+          i++;
+          setTimeout(typeTagline, 70);
+        } else {
+          taglineEl.innerHTML += '<span class="animate-pulse">|</span>';
+        }
+      }
+      typeTagline();
+
+      // Rotating roles
+      const roles = ["Backend Developer", "Fintech Builder", "Forever Curious"];
+      let index = 0;
+      const rotator = document.getElementById("role-rotator");
+
+      function showRole() {
+        rotator.classList.add("opacity-0", "translate-y-2");
+        setTimeout(() => {
+          rotator.textContent = roles[index];
+          rotator.classList.remove("opacity-0", "translate-y-2");
+          rotator.classList.add("opacity-100", "translate-y-0");
+        }, 200);
+        index = (index + 1) % roles.length;
+      }
+
+      showRole();
+      setInterval(showRole, 2500);
+    });
+  </script>
+
+  <!-- JSON-LD for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kapil Kuthe",
+    "jobTitle": "Backend Developer",
+    "description": "Brewing Secure APIs for the Future of Fintech ☕ | Backend Developer in Fintech using Go, Java Spring Boot, Redis, PostgreSQL, Docker",
+    "skills": ["Backend", "Fintech", "Curious", "Go", "Java Spring Boot", "Redis", "PostgreSQL", "Docker"],
+    "url": "https://your-portfolio-url.com",
+    "sameAs": [
+      "https://github.com/your-username",
+      "https://linkedin.com/in/your-profile"
+    ]
+  }
+  </script>
+</section>

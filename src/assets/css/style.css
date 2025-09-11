@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Theme Variables ===== */
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --accent: #000000;
+}
+
+.dark {
+  --bg: #000000;
+  --text: #ffffff;
+  --accent: #ffffff;
+}
+
+/* ===== Apply Variables ===== */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Reusable Utility Classes ===== */
+.btn {
+  @apply px-4 py-2 rounded-lg border transition;
+  background-color: var(--bg);
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+.btn:hover {
+  background-color: var(--accent);
+  color: var(--bg);
+}

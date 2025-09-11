@@ -1,0 +1,29 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "Kapil Kuthe - Personal Portfolio with Eleventy and Tailwind",
+  "main": ".eleventy.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "npm run css:build && eleventy",
+    "css:build": "tailwindcss -i ./src/assets/css/style.css -o ./_site/assets/css/style.css --minify",
+    "css:watch": "tailwindcss -i ./src/assets/css/style.css -o ./_site/assets/css/style.css --watch",
+    "dev": "concurrently \"npm run css:watch\" \"npm run start\""
+  },
+  "keywords": [
+    "eleventy",
+    "tailwind",
+    "portfolio",
+    "blog"
+  ],
+  "author": "Kapil Kuthe",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@tailwindcss/typography": "^0.5.16",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.0.1",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13"
+  }
+}
