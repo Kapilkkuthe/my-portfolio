@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kapil Kuthe - Portfolio</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+  <!-- Header & Navigation -->
+<header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm dark:bg-gray-900/80 transition-colors">
+  <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- Logo / Title -->
+    <h1 class="text-2xl font-bold text-slate-800 dark:text-gray-100">
+      <a href="/" aria-label="Kapil Kuthe Portfolio">Kapil Kuthe</a>
+    </h1>
+
+    <!-- Desktop Nav -->
+    <div class="flex items-center space-x-8">
+      <div class="hidden md:flex space-x-8">
+        <a href="/#home" class="nav-link text-slate-600 hover:text-amber-500 dark:text-gray-300 dark:hover:text-amber-500">Home</a>
+        <a href="/#experience" class="nav-link text-slate-600 hover:text-amber-500 dark:text-gray-300 dark:hover:text-amber-500">Experience</a>
+        <a href="/#skills" class="nav-link text-slate-600 hover:text-amber-500 dark:text-gray-300 dark:hover:text-amber-500">Skills</a>
+        <a href="/#projects" class="nav-link text-slate-600 hover:text-amber-500 dark:text-gray-300 dark:hover:text-amber-500">Projects</a>
+        <a href="/blog/" class="nav-link text-slate-600 hover:text-amber-500 dark:text-gray-300 dark:hover:text-amber-500">Blog</a>
+      </div>
+
+      <!-- Theme Toggle -->
+      <button id="theme-toggle" class="p-2 rounded-full bg-slate-200 dark:bg-gray-700 text-slate-700 dark:text-gray-200 hover:bg-slate-300 dark:hover:bg-gray-600 transition-colors" aria-label="Toggle theme">
+        ☀️
+      </button>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button" class="md:hidden text-slate-800 dark:text-gray-100" aria-expanded="false" aria-controls="mobile-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white dark:bg-gray-900 transition-colors">
+    <a href="#home" class="block py-2 nav-link text-slate-600 hover:text-amber-500 dark:text-gray-300 dark:hover:text-amber-500">Home</a>
+    <a href="#experience" class="block py-2 nav-link text-slate-600 hover:text-amber-500 dark:text-gray-300 dark:hover:text-amber-500">Experience</a>
+    <a href="#skills" class="block py-2 nav-link text-slate-600 hover:text-amber-500 dark:text-gray-300 dark:hover:text-amber-500">Skills</a>
+    <a href="#projects" class="block py-2 nav-link text-slate-600 hover:text-amber-500 dark:text-gray-300 dark:hover:text-amber-500">Projects</a>
+    <a href="/blog/" class="block py-2 nav-link text-slate-600 hover:text-amber-500 dark:text-gray-300 dark:hover:text-amber-500">Blog</a>
+  </div>
+</header>
+
+
+  <main class="container mx-auto p-6">
+    
+<section id="home" class="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 transition-colors">
+  <div class="text-center px-6 max-w-3xl">
+    <!-- Name -->
+    <h1 class="text-4xl md:text-6xl font-bold text-slate-800 dark:text-gray-100 mb-4">
+      Kapil Kuthe
+    </h1>
+
+    <!-- Typing Tagline -->
+    <p id="tagline" class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-6 h-8">
+      <!-- text will type here -->
+    </p>
+
+    <!-- Rotating Roles -->
+    <div class="text-2xl md:text-3xl font-semibold text-amber-600 h-10 mb-6">
+      <span id="role-rotator" class="inline-block"></span>
+    </div>
+
+    <!-- Self Intro -->
+    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+      I’m a <strong>Backend Developer</strong> passionate about building scalable, secure, and high-performance 
+      systems in the <strong>fintech space</strong>. From <strong>real-time stock data APIs</strong> to 
+      <strong>banking microservices</strong>, I enjoy solving complex problems with 
+      <strong>Go</strong>, <strong>Java Spring Boot</strong>, and modern tools like 
+      <strong>Redis</strong>, <strong>PostgreSQL</strong>, and <strong>Docker</strong>. 
+      Always <em>curious</em>, I thrive on learning and experimenting with new technologies to craft 
+      clean, reliable, and future-ready solutions.
+    </p>
+
+    <!-- Badges -->
+    <div class="flex justify-center flex-wrap gap-3 mb-8">
+      <span class="px-4 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Backend</span>
+      <span class="px-4 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Fintech</span>
+      <span class="px-4 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Curious</span>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="space-x-4 flex flex-wrap justify-center gap-4">
+      <a href="#projects" class="px-6 py-3 bg-amber-500 text-white rounded-lg shadow hover:bg-amber-600 transition">View Projects</a>
+      <a href="#contact" class="px-6 py-3 border border-amber-500 text-amber-600 rounded-lg hover:bg-amber-50 dark:hover:bg-gray-800 transition">Contact Me</a>
+      <a href="/assets/Kapil_Kuthe_Resume.pdf" download class="px-6 py-3 bg-gray-800 text-white rounded-lg shadow hover:bg-gray-700 dark:bg-gray-200 dark:text-gray-900 dark:hover:bg-gray-300 transition">Download Resume</a>
+    </div>
+  </div>
+
+  <!-- Typing + Rotator Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Typing effect with blinking cursor
+      const taglineText = "Brewing Secure APIs for the Future of Fintech ☕";
+      const taglineEl = document.getElementById("tagline");
+      let i = 0;
+
+      function typeTagline() {
+        if (i < taglineText.length) {
+          taglineEl.textContent += taglineText.charAt(i);
+          i++;
+          setTimeout(typeTagline, 70);
+        } else {
+          taglineEl.innerHTML += '<span class="animate-pulse">|</span>';
+        }
+      }
+      typeTagline();
+
+      // Rotating roles
+      const roles = ["Backend Developer", "Fintech Builder", "Forever Curious"];
+      let index = 0;
+      const rotator = document.getElementById("role-rotator");
+
+      function showRole() {
+        rotator.classList.add("opacity-0", "translate-y-2");
+        setTimeout(() => {
+          rotator.textContent = roles[index];
+          rotator.classList.remove("opacity-0", "translate-y-2");
+          rotator.classList.add("opacity-100", "translate-y-0");
+        }, 200);
+        index = (index + 1) % roles.length;
+      }
+
+      showRole();
+      setInterval(showRole, 2500);
+    });
+  </script>
+
+  <!-- JSON-LD for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kapil Kuthe",
+    "jobTitle": "Backend Developer",
+    "description": "Brewing Secure APIs for the Future of Fintech ☕ | Backend Developer in Fintech using Go, Java Spring Boot, Redis, PostgreSQL, Docker",
+    "skills": ["Backend", "Fintech", "Curious", "Go", "Java Spring Boot", "Redis", "PostgreSQL", "Docker"],
+    "url": "https://your-portfolio-url.com",
+    "sameAs": [
+      "https://github.com/your-username",
+      "https://linkedin.com/in/your-profile"
+    ]
+  }
+  </script>
+</section>
+
+<section id="skills" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center text-slate-800 dark:text-gray-100 mb-8">⚡ Skills</h2>
+
+    <div class="space-y-10">
+
+      <!-- backend -->
+      <div>
+        <h3 class="text-xl font-semibold text-amber-600 mb-4">Backend Development</h3>
+        <div class="space-y-4">
+          <div class="mb-4">
+        <!-- Icon + Label + Percentage -->
+        <div class="flex items-center justify-between mb-1">
+          <div class="flex items-center space-x-2">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg" 
+                class="w-6 h-6" alt="Go" />
+            <span>Go (Golang)</span>
+          </div>
+          <span>80%</span>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+          <div class="bg-amber-500 h-3 rounded-full" style="width: 80%"></div>
+        </div>
+      </div>
+
+          <div>
+            <p class="flex justify-between">
+              <span>Java Spring Boot</span><span>75%</span>
+            </p>
+
+            <!-- Progress Bar -->
+        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+          <div class="bg-amber-500 h-3 rounded-full" style="width: 75%"></div>
+        </div>
+          </div>
+        </div>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Golang</span>
+          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Java</span>
+          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Spring Boot</span>
+          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">REST APIs</span>
+        </div>
+      </div>
+
+      <!-- databases -->
+      <div>
+        <h3 class="text-xl font-semibold text-amber-600 mb-4">Databases</h3>
+        <div class="space-y-4">
+          <div>
+            <p class="flex justify-between">
+              <span>PostgreSQL</span><span>65%</span>
+            </p>
+            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+              <div class="bg-amber-500 h-3 rounded-full" style="width: 65%"></div>
+            </div>
+          </div>
+          <div>
+            <p class="flex justify-between">
+              <span>Redis</span><span>80%</span>
+            </p>
+            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+              <div class="bg-amber-500 h-3 rounded-full" style="width: 80%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">PostgreSQL</span>
+          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Redis</span>
+          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">SQL</span>
+        </div>
+      </div>
+
+      <!-- tools -->
+      <div>
+        <h3 class="text-xl font-semibold text-amber-600 mb-4">Tools & DevOps</h3>
+        <div class="space-y-4">
+          <div>
+            <p class="flex justify-between">
+              <span>Docker</span><span>75%</span>
+            </p>
+            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+              <div class="bg-amber-500 h-3 rounded-full" style="width: 75%"></div>
+            </div>
+          </div>
+          <div>
+            <p class="flex justify-between">
+              <span>Git / GitHub</span><span>85%</span>
+            </p>
+            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+              <div class="bg-amber-500 h-3 rounded-full" style="width: 85%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Docker</span>
+          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Git</span>
+          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">GitHub</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JSON-LD structured data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "DefinedTerm",
+        "name": "Backend Development",
+        "description": "Proficient in Golang, Java, Spring Boot, REST APIs"
+      },
+      {
+        "@type": "DefinedTerm",
+        "name": "Databases",
+        "description": "Experienced with PostgreSQL, Redis, SQL"
+      },
+      {
+        "@type": "DefinedTerm",
+        "name": "Tools & DevOps",
+        "description": "Skilled with Docker, Git, GitHub, CI/CD workflows"
+      }
+    ]
+  }
+  </script>
+</section>
+
+<section id="projects" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center text-slate-800 dark:text-gray-100 mb-8">🚀 Projects</h2>
+    <div class="space-y-8">
+
+      <!-- stock-data -->
+      <div class="p-6 border rounded-lg shadow-sm bg-white dark:bg-gray-800">
+        <h3 class="text-xl font-semibold text-amber-600 mb-2">Stock Data APIs</h3>
+        <p class="text-gray-700 dark:text-gray-300 mb-3">
+          Built high-performance stock market APIs using <strong>Golang</strong> with 
+          <strong>Redis caching</strong> and <strong>PostgreSQL</strong> for real-time trading data delivery.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Go (Golang)</span>
+          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Redis</span>
+          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">PostgreSQL</span>
+          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">REST API</span>
+        </div>
+      </div>
+
+      <!-- banking -->
+      <div class="p-6 border rounded-lg shadow-sm bg-white dark:bg-gray-800">
+        <h3 class="text-xl font-semibold text-amber-600 mb-2">Banking & Mutual Fund APIs</h3>
+        <p class="text-gray-700 dark:text-gray-300 mb-3">
+          Designed and deployed secure <strong>REST APIs</strong> using <strong>Java Spring Boot</strong> 
+          for banking and mutual fund operations, ensuring compliance and scalability.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Java</span>
+          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Spring Boot</span>
+          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">REST API</span>
+          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Fintech</span>
+        </div>
+      </div>
+
+      <!-- notification -->
+      <div class="p-6 border rounded-lg shadow-sm bg-white dark:bg-gray-800">
+        <h3 class="text-xl font-semibold text-amber-600 mb-2">Notification & Engagement Service</h3>
+        <p class="text-gray-700 dark:text-gray-300 mb-3">
+          Developed a scalable <strong>SMS/Email microservice</strong> in <strong>Go (Golang)</strong> 
+          with <strong>message queues</strong>, improving delivery speed and reliability.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Go (Golang)</span>
+          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Microservices</span>
+          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Message Queues</span>
+          <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Email/SMS</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JSON-LD structured data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "CreativeWork",
+        "position": 1,
+        "name": "Stock Data APIs",
+        "description": "Built high-performance stock market APIs using Golang with Redis caching and PostgreSQL for real-time trading data.",
+        "keywords": "Golang, Redis, PostgreSQL, REST API, Stock Market"
+      },
+      {
+        "@type": "CreativeWork",
+        "position": 2,
+        "name": "Banking & Mutual Fund APIs",
+        "description": "Designed and deployed secure REST APIs using Java Spring Boot for banking and mutual fund operations.",
+        "keywords": "Java, Spring Boot, REST API, Fintech, Banking"
+      },
+      {
+        "@type": "CreativeWork",
+        "position": 3,
+        "name": "Notification & Engagement Service",
+        "description": "Developed a scalable SMS/Email microservice in Go (Golang) with message queues for improved delivery speed and reliability.",
+        "keywords": "Golang, Microservices, Message Queues, Email, SMS"
+      }
+    ]
+  }
+  </script>
+</section>
+
+<section id="experience" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center text-slate-800 dark:text-gray-100 mb-12">💼 Experience</h2>
+
+    <div class="relative border-l-2 border-amber-500 dark:border-amber-400">
+      
+      <!-- torus-digital -->
+      <div class="mb-10 ml-6 group">
+        <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-amber-500 rounded-full ring-8 ring-gray-100 dark:ring-gray-900"></span>
+        <div class="p-6 bg-white dark:bg-gray-800 border rounded-lg shadow-sm transition transform group-hover:scale-[1.02] group-hover:shadow-md">
+          <h3 class="text-xl font-semibold text-amber-600">Software Developer</h3>
+          <p class="text-gray-500">Torus Digital Pvt. Ltd. | Andheri, Mumbai | Jul 2022 – Present</p>
+          <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mt-3 space-y-2">
+            <li>Built scalable REST APIs (<strong>Java Spring Boot</strong>, <strong>Golang Fiber/Iris</strong>), reducing downtime by 25%.</li>
+            <li>Optimised 80K+ line codebases with <strong>SOLID</strong> principles, cutting build times by 15%.</li>
+            <li>Led backend development for fintech/banking systems.</li>
+            <li>Improved DB performance by 20% with <strong>query tuning + Redis caching</strong>.</li>
+            <li>Enhanced observability with <strong>Grafana + ELK</strong>.</li>
+          </ul>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Golang</span>
+            <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Spring Boot</span>
+            <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Redis</span>
+            <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Grafana</span>
+            <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">ELK</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- barcode-india -->
+      <div class="mb-10 ml-6 group">
+        <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-amber-500 rounded-full ring-8 ring-gray-100 dark:ring-gray-900"></span>
+        <div class="p-6 bg-white dark:bg-gray-800 border rounded-lg shadow-sm transition transform group-hover:scale-[1.02] group-hover:shadow-md">
+          <h3 class="text-xl font-semibold text-amber-600">Software Support Engineer</h3>
+          <p class="text-gray-500">Barcode India Ltd. | Andheri, Mumbai | Feb 2021 – Jun 2022</p>
+          <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mt-3 space-y-2">
+            <li>Supported pharma clients with 90% satisfaction rate.</li>
+            <li>Resolved backend issues via <strong>SQL</strong>, reducing resolution time by 20%.</li>
+            <li>Collaborated on system improvements for better UX.</li>
+            <li>Delivered on-site & remote technical support.</li>
+          </ul>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">SQL</span>
+            <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Client Support</span>
+            <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">System Maintenance</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- aidemtec -->
+      <div class="ml-6 group">
+        <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-amber-500 rounded-full ring-8 ring-gray-100 dark:ring-gray-900"></span>
+        <div class="p-6 bg-white dark:bg-gray-800 border rounded-lg shadow-sm transition transform group-hover:scale-[1.02] group-hover:shadow-md">
+          <h3 class="text-xl font-semibold text-amber-600">Customer Support Executive</h3>
+          <p class="text-gray-500">Aidemtec Service Pvt. Ltd. | Andheri, Mumbai | Jan 2019 – May 2020</p>
+          <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mt-3 space-y-2">
+            <li>Managed 100+ monthly queries, boosting satisfaction.</li>
+            <li>Performed manual testing, reducing deployment issues by 15%.</li>
+            <li>Maintained/upgraded technical documentation.</li>
+            <li>Delivered training, increasing adoption by 12%.</li>
+          </ul>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Testing</span>
+            <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Documentation</span>
+            <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full">Training</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JSON-LD structured data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "WorkExperience",
+        "position": 1,
+        "name": "Software Developer",
+        "hiringOrganization": "Torus Digital Pvt. Ltd.",
+        "startDate": "2022-07",
+        "description": "Built REST APIs (Spring Boot, Golang), improved DB with Redis, enhanced observability with Grafana + ELK."
+      },
+      {
+        "@type": "WorkExperience",
+        "position": 2,
+        "name": "Software Support Engineer",
+        "hiringOrganization": "Barcode India Ltd.",
+        "startDate": "2021-02",
+        "endDate": "2022-06",
+        "description": "Supported pharma clients, resolved SQL issues, improved uptime."
+      },
+      {
+        "@type": "WorkExperience",
+        "position": 3,
+        "name": "Customer Support Executive",
+        "hiringOrganization": "Aidemtec Service Pvt. Ltd.",
+        "startDate": "2019-01",
+        "endDate": "2020-05",
+        "description": "Managed queries, performed testing, maintained documentation, delivered client training."
+      }
+    ]
+  }
+  </script>
+</section>
+
+
+  </main>
+
+  <footer class="p-4 text-center text-sm bg-gray-100 dark:bg-gray-900 mt-10">
+  ©2025 Kapil Kuthe
+</footer>
+
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
