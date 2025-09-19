@@ -4,8 +4,8 @@ title: "Blog - Kapil Kuthe"
 description: "Insights on Go, Backend Development, and Fintech APIs from Kapil Kuthe."
 pagination:
   data: collections.post
-  size: 6        # number of posts per page
-  reverse: true  # newest first
+  size: 6 # number of posts per page
+  reverse: true # newest first
   alias: posts
 permalink: "/blog/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
@@ -13,58 +13,78 @@ permalink: "/blog/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumbe
 <section class="container mx-auto px-6 py-12">
   <header class="text-center mb-12">
     <h1 class="text-4xl font-bold text-slate-800 dark:text-gray-100">Blog</h1>
-    <p class="text-gray-600 dark:text-gray-300 mt-2">Thoughts on backend, fintech, and Go (Golang).</p>
+    <p class="text-gray-600 dark:text-gray-300 mt-2">
+      Thoughts on backend, fintech, and Go (Golang).
+    </p>
   </header>
 
   <!-- Blog Cards -->
   <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
     {% for post in posts %}
-      <article class="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition p-6 flex flex-col">
-        <h2 class="text-xl font-semibold text-slate-800 dark:text-gray-100 mb-2">
-          <a href="{{ post.url }}" class="hover:text-amber-500">{{ post.data.title }}</a>
-        </h2>
-        <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">
-          {{ post.date | date("MMMM d, yyyy") }}
-        </p>
-        <p class="text-gray-600 dark:text-gray-300 text-sm flex-grow">
-          {{ post.data.description or post.templateContent | truncate(150) }}
-        </p>
-        <a href="{{ post.url }}" class="mt-4 inline-block text-amber-600 hover:text-amber-700 text-sm font-medium">
-          Read more →
-        </a>
-      </article>
+    <article
+      class="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition p-6 flex flex-col"
+    >
+      <h2 class="text-xl font-semibold text-slate-800 dark:text-gray-100 mb-2">
+        <a href="{{ post.url }}" class="hover:text-amber-500">{{
+          post.data.title
+        }}</a>
+      </h2>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">
+        {{ post.date | date("MMMM d, yyyy") }}
+      </p>
+      <p class="text-gray-600 dark:text-gray-300 text-sm flex-grow">
+        {{ post.data.description or post.templateContent | truncate(150) }}
+      </p>
+      <a
+        href="{{ post.url }}"
+        class="mt-4 inline-block text-amber-600 hover:text-amber-700 text-sm font-medium"
+      >
+        Read more →
+      </a>
+    </article>
     {% endfor %}
   </div>
 
   <!-- Pagination Controls -->
-  <nav class="flex justify-center items-center space-x-4 mt-12 text-sm font-medium">
+  <nav
+    class="flex justify-center items-center space-x-4 mt-12 text-sm font-medium"
+  >
     {% if pagination.href.previous %}
-      <a href="{{ pagination.href.previous }}" class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded hover:bg-amber-500 hover:text-white transition">
-        ← Newer Posts
-      </a>
+    <a
+      href="{{ pagination.href.previous }}"
+      class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded hover:bg-amber-500 hover:text-white transition"
+    >
+      ← Newer Posts
+    </a>
     {% endif %}
 
-    <span>Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}</span>
+    <span
+      >Page {{ pagination.pageNumber + 1 }} of
+      {{ pagination.pages.length }}</span
+    >
 
     {% if pagination.href.next %}
-      <a href="{{ pagination.href.next }}" class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded hover:bg-amber-500 hover:text-white transition">
-        Older Posts →
-      </a>
+    <a
+      href="{{ pagination.href.next }}"
+      class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded hover:bg-amber-500 hover:text-white transition"
+    >
+      Older Posts →
+    </a>
     {% endif %}
   </nav>
 </section>
 
 <!-- SEO: JSON-LD for Blog -->
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  "url": "{{ page.url | url }}",
-  "name": "Kapil Kuthe Blog",
-  "description": "Technical insights and posts about Go, backend engineering, and fintech.",
-  "author": {
-    "@type": "Person",
-    "name": "Kapil Kuthe"
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "url": "{{ page.url | url }}",
+    "name": "Kapil Kuthe Blog",
+    "description": "Technical insights and posts about Go, backend engineering, and fintech.",
+    "author": {
+      "@type": "Person",
+      "name": "Kapil Kuthe"
+    }
   }
-}
 </script>

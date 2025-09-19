@@ -34,9 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalDesc = document.getElementById("modal-description");
   const modalClose = document.getElementById("modal-close");
 
-  document.querySelectorAll(".project-card").forEach(card => {
+  document.querySelectorAll(".project-card").forEach((card) => {
     card.addEventListener("click", () => {
-      modalTitle.textContent = card.querySelector("h3").textContent;
+      const h3 = card.querySelector("h3");
+      const descElem = card.querySelector("p");
+      modalDesc.textContent = descElem ? descElem.textContent : "";
       modalDesc.textContent = card.querySelector("p").textContent;
       modal.classList.remove("hidden");
     });
@@ -47,20 +49,35 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Skills radar chart
-  if (document.getElementById("skills-chart")) {
-    const ctx = document.getElementById("skills-chart").getContext("2d");
-    new Chart(ctx, {
-      type: "radar",
-      data: {
-        labels: ["Go", "Java", "PostgreSQL", "Redis", "API Design", "System Design"],
-        datasets: [{
-          label: "Skills",
-          data: [85, 80, 75, 70, 80, 65],
-          backgroundColor: "rgba(59,130,246,0.2)",
-          borderColor: "rgba(59,130,246,1)"
-        }]
-      },
-      options: { responsive: true, scales: { r: { beginAtZero: true } } }
-    });
+  const skillsChartElem = document.getElementById("skills-chart");
+  if (skillsChartElem) {
+    if (typeof Chart !== "undefined") {
+      const ctx = skillsChartElem.getContext("2d");
+      new Chart(ctx, {
+        type: "radar",
+        data: {
+          labels: [
+            "Go",
+            "Java",
+            "PostgreSQL",
+            "Redis",
+            "MS SQL",
+            "API Design",
+            "System Design",
+          ],
+          datasets: [
+            {
+              label: "Skills",
+              data: [80, 75, 75, 65, 80,70, 65],
+              backgroundColor: "rgba(59,130,246,0.2)",
+              borderColor: "rgba(59,130,246,1)",
+            },
+          ],
+        },
+        options: { responsive: true, scales: { r: { beginAtZero: true } } },
+      });
+    } else {
+      console.error("Chart.js is not loaded. Skills chart cannot be rendered.");
+    }
   }
 });
