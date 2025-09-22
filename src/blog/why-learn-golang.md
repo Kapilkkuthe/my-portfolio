@@ -4,6 +4,7 @@ title: "Why Go is Powering the Future of Software (And Why You Should Learn It N
 date: 2025-09-10
 tags: post
 description: "Go (Golang) has grown from a Google project to the backbone of systems like Docker, Kubernetes, and Uber. Here’s why it matters."
+author: kapil kuthe
 ---
 
 # Why Go is Powering the Future of Software (And Why You Should Learn It Now)

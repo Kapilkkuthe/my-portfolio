@@ -28,6 +28,39 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Scroll Spy with Intersection Observer
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll("nav a[href*='#']");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const id = entry.target.getAttribute("id");
+        const navLink = document.querySelector(`nav a[href="/#${id}"]`);
+
+        if (entry.isIntersecting) {
+          navLinks.forEach((link) =>
+            link.classList.remove("text-amber-500", "font-semibold")
+          );
+          navLink?.classList.add("text-amber-500", "font-semibold");
+        }
+      });
+    },
+    { threshold: 0.6 } // trigger when 60% of section is visible
+  );
+
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+
+  // Auto-highlight Blog link if we're on /blog/
+  const blogLink = document.querySelector('nav a[href="/blog/"]');
+  if (window.location.pathname.startsWith("/blog")) {
+    blogLink?.classList.add("text-amber-500", "font-semibold", "active");
+    const underline = blogLink.querySelector("span");
+    if (underline) underline.style.width = "100%";
+  }
+
   // Project modal
   const modal = document.getElementById("project-modal");
   const modalTitle = document.getElementById("modal-title");
@@ -68,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
           datasets: [
             {
               label: "Skills",
-              data: [80, 75, 75, 65, 80,70, 65],
+              data: [80, 75, 75, 65, 80, 70, 65],
               backgroundColor: "rgba(59,130,246,0.2)",
               borderColor: "rgba(59,130,246,1)",
             },

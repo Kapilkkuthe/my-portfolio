@@ -1,0 +1,73 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* ===== Global Styles ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add to theme variables section */
+:root {
+  --nav-active: #f59e0b; /* amber-500 */
+}
+
+.nav-link.active::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: var(--nav-active);
+  width: 100%;
+  transition: width 0.3s ease;
+}
+
+.nav-link.active {
+  color: var(--nav-active);
+  font-weight: 600; /* font-semibold */
+}
+
+.nav-link.active span {
+  width: 100%; /* keeps underline full width for active item */
+}
+/* ===== Theme Variables ===== */
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --accent: #000000;
+}
+
+.dark {
+  --bg: #000000;
+  --text: #ffffff;
+  --accent: #ffffff;
+}
+
+/* ===== Apply Variables ===== */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+}
+
+/* ===== Reusable Utility Classes ===== */
+.btn {
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem; /* px-4 */
+  padding-top: 0.5rem; /* py-2 */
+  padding-bottom: 0.5rem; /* py-2 */
+  border-radius: 0.5rem; /* rounded-lg */
+  border-width: 1px; /* border */
+  border-style: solid; /* border */
+  transition: all 0.2s; /* transition */
+  background-color: var(--bg);
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+.btn:hover {
+  background-color: var(--accent);
+  color: var(--bg);
+}

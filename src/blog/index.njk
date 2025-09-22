@@ -33,7 +33,9 @@ permalink: "/blog/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumbe
         {{ post.date | date("MMMM d, yyyy") }}
       </p>
       <p class="text-gray-600 dark:text-gray-300 text-sm flex-grow">
-        {{ post.data.description or post.templateContent | truncate(150) }}
+        {{ post.data.description
+          or (post.data.excerpt if post.data.excerpt)
+          or (post.templateContent | striptags | truncate(150, true, '...')) }}
       </p>
       <a
         href="{{ post.url }}"

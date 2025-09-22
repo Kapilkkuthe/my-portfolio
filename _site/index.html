@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Kapil Kuthe</title>
     <link rel="stylesheet" href="/assets/css/style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,33 +26,48 @@
 
     <!-- Desktop Nav -->
     <div class="flex items-center space-x-8">
-      <div class="hidden md:flex space-x-8">  
-        <a
-          href="/#home"
-          class="nav-link text-slate-600 hover:text-amber-500 dark:text-gray-300 dark:hover:text-amber-500"
-          >Home</a
-        >
-        <a
-          href="/#experience"
-          class="nav-link text-slate-600 hover:text-amber-500 dark:text-gray-300 dark:hover:text-amber-500"
-          >Experience</a
-        >
-        <a
-          href="/#skills"
-          class="nav-link text-slate-600 hover:text-amber-500 dark:text-gray-300 dark:hover:text-amber-500"
-          >Skills</a
-        >
-        <a
-          href="/#projects"
-          class="nav-link text-slate-600 hover:text-amber-500 dark:text-gray-300 dark:hover:text-amber-500"
-          >Projects</a
-        >
-        <a
-          href="/blog/"
-          class="nav-link text-slate-600 hover:text-amber-500 dark:text-gray-300 dark:hover:text-amber-500 "
-          >Blog</a
-        >
-      </div>
+      <div class="hidden md:flex space-x-8">
+  <a
+    href="/#home"
+    class="nav-link relative group no-underline text-slate-600 dark:text-gray-300 hover:text-amber-500 transition-colors"
+  >
+    Home
+    <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-amber-500 transition-all group-hover:w-full"></span>
+  </a>
+
+  <a
+    href="/#skills"
+    class="nav-link relative group no-underline text-slate-600 dark:text-gray-300 hover:text-amber-500 transition-colors"
+  >
+    Skills
+    <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-amber-500 transition-all group-hover:w-full"></span>
+  </a>
+
+  <a
+    href="/#projects"
+    class="nav-link relative group no-underline text-slate-600 dark:text-gray-300 hover:text-amber-500 transition-colors"
+  >
+    Projects
+    <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-amber-500 transition-all group-hover:w-full"></span>
+  </a>
+
+  <a
+    href="/#experience"
+    class="nav-link relative group no-underline text-slate-600 dark:text-gray-300 hover:text-amber-500 transition-colors"
+  >
+    Experience
+    <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-amber-500 transition-all group-hover:w-full"></span>
+  </a>
+
+  <a
+    href="/blog/"
+    class="nav-link relative group no-underline text-slate-600 dark:text-gray-300 hover:text-amber-500 transition-colors"
+  >
+    Blog
+    <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-amber-500 transition-all group-hover:w-full"></span>
+  </a>
+</div>
+
 
       <!-- Theme Toggle -->
       <button
@@ -91,35 +105,16 @@
 
   <!-- Mobile Menu -->
   <div
-    id="mobile-menu"
-    class="hidden md:hidden px-6 pb-4 bg-white dark:bg-gray-900 transition-colors"
-  >
-    <a
-      href="#home"
-      class="block py-2 nav-link text-slate-600 hover:text-amber-500 dark:text-gray-300 dark:hover:text-amber-500"
-      >Home</a
-    >
-    <a
-      href="#experience"
-      class="block py-2 nav-link text-slate-600 hover:text-amber-500 dark:text-gray-300 dark:hover:text-amber-500"
-      >Experience</a
-    >
-    <a
-      href="#skills"
-      class="block py-2 nav-link text-slate-600 hover:text-amber-500 dark:text-gray-300 dark:hover:text-amber-500"
-      >Skills</a
-    >
-    <a
-      href="#projects"
-      class="block py-2 nav-link text-slate-600 hover:text-amber-500 dark:text-gray-300 dark:hover:text-amber-500"
-      >Projects</a
-    >
-    <a
-      href="/blog/"
-      class="block py-2 nav-link text-slate-600 hover:text-amber-500 dark:text-gray-300 dark:hover:text-amber-500"
-      >Blog</a
-    >
-  </div>
+  id="mobile-menu"
+  class="hidden md:hidden px-6 pb-4 bg-white dark:bg-gray-900 transition-colors"
+>
+  <a href="/#home" class="block py-2 nav-link">Home</a>
+  <a href="/#experience" class="block py-2 nav-link">Experience</a>
+  <a href="/#skills" class="block py-2 nav-link">Skills</a>
+  <a href="/#projects" class="block py-2 nav-link">Projects</a>
+  <a href="/blog/" class="block py-2 nav-link">Blog</a>
+</div>
+
 </header>
 
 
@@ -195,11 +190,6 @@
         class="px-6 py-3 bg-amber-500 text-white rounded-lg shadow hover:bg-amber-600 transition"
         >View Projects</a
       >
-      <!-- <a
-        href="#contact"
-        class="px-6 py-3 border border-amber-500 text-amber-600 rounded-lg hover:bg-amber-50 dark:hover:bg-gray-800 transition"
-        >Contact Me</a
-      > -->
       <a
         href="/assets/Kapil_Kuthe_Resume.pdf"
         download
