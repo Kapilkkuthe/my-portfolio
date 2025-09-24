@@ -5,10 +5,11 @@
   "main": ".eleventy.js",
   "scripts": {
     "start": "eleventy --serve",
+    "dev": "concurrently \"npm run css:watch\" \"npm run start\"",
+    "css:build": "postcss src/assets/css/input.css -o src/assets/css/style.css",
+    "css:watch": "postcss src/assets/css/input.css -o src/assets/css/style.css --watch",
     "build": "npm run css:build && eleventy",
-    "css:build": "tailwindcss -i ./src/assets/css/style.css -o ./_site/assets/css/style.css --minify",
-    "css:watch": "tailwindcss -i ./src/assets/css/style.css -o ./_site/assets/css/style.css --watch",
-    "dev": "concurrently \"npm run css:watch\" \"npm run start\""
+    "build:prod": "NODE_ENV=production postcss src/assets/css/input.css -o src/assets/css/style.css --env production && eleventy"
   },
   "keywords": [
     "eleventy",
