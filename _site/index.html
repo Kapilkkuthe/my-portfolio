@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
     <title>Kapil Kuthe</title>
     <link rel="stylesheet" href="/assets/css/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -124,29 +124,29 @@
     <a href="/blog/" class="block py-2 nav-link">Blog</a>
   </div>
 </header>
-
-
-    <main class="container mx-auto p-6">
+    <main class="mx-auto max-w-5xl px-6">
       
 <section
   id="home"
-  class="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 transition-colors"
+  class="min-h-screen flex flex-col items-center justify-center px-6 text-center bg-gray-50 dark:bg-gray-900 transition-colors"
 >
-  <div class="text-center px-6 max-w-3xl">
+  <div class="text-center px-6 max-w-3xl animate-fadeIn">
     <!-- Profile Image -->
     <div class="flex justify-center mb-6">
       <img
         src="/assets/img/profile.png"
         alt="Kapil Kuthe"
-        class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white dark:border-gray-800 shadow-lg -mt-20"
+        class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white object-cover shadow-lg mb-6 dark:border-gray-800 -mt-20"
         oncontextmenu="return false;"
         draggable="false"
+        loading="lazy"
+        decoding="async"
       />
     </div>
 
     <!-- Name -->
     <h1
-      class="text-4xl md:text-6xl font-bold text-slate-800 dark:text-gray-100 mb-4"
+      class="text-3xl md:text-5xl font-extrabold text-slate-800 dark:text-gray-100 mb-4"
     >
       Kapil Kuthe
     </h1>
@@ -160,12 +160,14 @@
     </p>
 
     <!-- Rotating Roles -->
-    <div class="text-2xl md:text-3xl font-semibold text-amber-600 h-10 mb-6">
+    <div class="text-xl md:text-2xl font-semibold text-amber-600 h-10 mb-6">
       <span id="role-rotator" class="inline-block"></span>
     </div>
 
     <!-- Self Intro -->
-    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+    <p
+      class="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6 max-w-3xl mx-auto"
+    >
       I’m a <strong>Backend Developer</strong> passionate about building
       scalable, secure, and high-performance systems in the
       <strong>fintech space</strong>. From
@@ -281,6 +283,23 @@
   </script>
 </section>
 
+<style>
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 1.2s ease-out both;
+  }
+</style>
 <section
   id="skills"
   class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors"
