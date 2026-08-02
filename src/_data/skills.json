@@ -1,0 +1,64 @@
+[
+  {
+    "category": "Backend Development",
+    "skills": [
+      {
+        "name": "Go (Golang)",
+        "level": 80,
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg"
+      },
+      {
+        "name": "Java Spring Boot",
+        "level": 70,
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+      }
+    ],
+    "tags": ["Golang", "Java", "Spring Boot", "REST APIs"]
+  },
+  {
+    "category": "Databases",
+    "skills": [
+      {
+        "name": "PostgreSQL",
+        "level": 65,
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg"
+      },
+      {
+        "name": "Redis",
+        "level": 80,
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+      },
+      {
+        "name": "MSSQL",
+        "level": 70,
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-original-wordmark.svg"
+      }
+    ],
+    "tags": ["PostgreSQL", "Redis", "MSSQL", "SQL"]
+  },
+  {
+    "category": "Tools & DevOps",
+    "skills": [
+      {
+        "name": "Docker",
+        "level": 70,
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg"
+      },
+      {
+        "name": "Git / GitHub",
+        "level": 80,
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+      },
+      {
+        "name": "ELK Stack",
+        "level": 60,
+        "icons": [
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elasticsearch/elasticsearch-original.svg",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/logstash/logstash-original.svg",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kibana/kibana-original.svg"
+        ]
+      }
+    ],
+    "tags": ["Docker", "Git", "GitHub", "ELK Stack"]
+  }
+]

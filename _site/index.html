@@ -2,27 +2,99 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Kapil Kuthe</title>
+    <meta name="description" content="Backend Developer (Go, Java Spring Boot) in Fintech" />
+    <link rel="canonical" href="https://kapilkuthe.me/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kapilkuthe.me/" />
+    <meta property="og:title" content="Kapil Kuthe" />
+    <meta property="og:description" content="Backend Developer (Go, Java Spring Boot) in Fintech" />
+    <meta property="og:image" content="https://kapilkuthe.me/assets/img/profile.webp" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://kapilkuthe.me/" />
+    <meta property="twitter:title" content="Kapil Kuthe" />
+    <meta property="twitter:description" content="Backend Developer (Go, Java Spring Boot) in Fintech" />
+    <meta property="twitter:image" content="https://kapilkuthe.me/assets/img/profile.webp" />
+
     <link rel="stylesheet" href="/assets/css/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kapil Kuthe",
+        "jobTitle": "Senior Backend Developer",
+        "url": "https://kapilkuthe.me",
+        "sameAs": [
+          "https://github.com/kapilkkuthe",
+          "https://linkedin.com/in/kapil-kuthe"
+        ],
+        "description": "Senior Backend Developer specializing in Fintech, Banking systems, Distributed Systems, Go, Java Spring Boot, Redis, PostgreSQL, and Docker.",
+        "knowsAbout": [
+          "Go (Golang)",
+          "Java Spring Boot",
+          "REST APIs",
+          "Microservices",
+          "Distributed Systems",
+          "PostgreSQL",
+          "Redis",
+          "MSSQL",
+          "Docker",
+          "Git/GitHub",
+          "ELK Stack",
+          "Grafana",
+          "System Design"
+        ],
+        "hasOccupation": [
+          {
+            "@type": "Occupation",
+            "name": "Software Developer",
+            "description": "Built scalable REST APIs in Java Spring Boot and Golang, optimizing database query performances and observability.",
+            "startDate": "2022-07",
+            "hiringOrganization": {
+              "@type": "Organization",
+              "name": "Torus Digital Pvt. Ltd."
+            }
+          },
+          {
+            "@type": "Occupation",
+            "name": "Software Support Engineer",
+            "description": "Resolved critical production database issues through SQL diagnostics and client integrations.",
+            "startDate": "2021-02",
+            "endDate": "2022-06",
+            "hiringOrganization": {
+              "@type": "Organization",
+              "name": "Barcode India Ltd."
+            }
+          }
+        ]
+      }
+    </script>
+    
   </head>
   <body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-amber-500 focus:text-white">Skip to main content</a>
     <!-- Header & Navigation -->
 <header
   class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm dark:bg-gray-900/80 transition-colors"
 >
   <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
     <!-- Logo / Title -->
-    <h1 class="text-2xl font-bold text-slate-800 dark:text-gray-100">
+    <div class="text-2xl font-bold text-slate-800 dark:text-gray-100">
       <a href="/" aria-label="Kapil Kuthe">Kapil Kuthe</a>
-    </h1>
+    </div>
 
     <!-- Desktop Nav -->
     <div class="flex items-center space-x-8">
@@ -124,7 +196,9 @@
     <a href="/blog/" class="block py-2 nav-link">Blog</a>
   </div>
 </header>
-    <main class="mx-auto max-w-5xl px-6">
+
+
+    <main id="main-content" class="mx-auto max-w-5xl px-6">
       
 <section
   id="home"
@@ -134,12 +208,11 @@
     <!-- Profile Image -->
     <div class="flex justify-center mb-6">
       <img
-        src="/assets/img/profile.png"
-        alt="Kapil Kuthe"
+        src="/assets/img/profile.webp"
+        alt="Kapil Kuthe - Senior Backend Developer"
         class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white object-cover shadow-lg mb-6 dark:border-gray-800 -mt-20"
-        oncontextmenu="return false;"
-        draggable="false"
-        loading="lazy"
+        loading="eager"
+        fetchpriority="high"
         decoding="async"
       />
     </div>
@@ -160,7 +233,7 @@
     </p>
 
     <!-- Rotating Roles -->
-    <div class="text-xl md:text-2xl font-semibold text-amber-600 h-10 mb-6">
+    <div class="text-xl md:text-2xl font-semibold text-amber-800 dark:text-amber-400 h-10 mb-6">
       <span id="role-rotator" class="inline-block"></span>
     </div>
 
@@ -197,7 +270,7 @@
     <div class="space-x-4 flex flex-wrap justify-center gap-4">
       <a
         href="#projects"
-        class="px-6 py-3 bg-amber-500 text-white rounded-lg shadow hover:bg-amber-600 transition"
+        class="px-6 py-3 bg-amber-700 text-white rounded-lg shadow hover:bg-amber-800 dark:bg-amber-500 dark:text-slate-950 dark:hover:bg-amber-600 transition font-medium"
         >View Projects</a
       >
       <a
@@ -247,40 +320,6 @@
       setInterval(showRole, 2500);
     });
   </script>
-
-  <!-- JSON-LD for SEO -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Kapil Kuthe",
-      "jobTitle": "Backend Developer",
-      "description": "Brewing Secure APIs for the Future of Fintech ☕ | Backend Developer in Fintech using Go, Java Spring Boot, Redis, PostgreSQL, Docker",
-      "skills": [
-        "Backend",
-        "Fintech",
-        "Curious",
-        "Go",
-        "Java Spring Boot",
-        "Redis",
-        "PostgreSQL",
-        "Docker",
-        "REST APIs",
-        "Microservices",
-        "ELK Stack",
-        "Grafana",
-        "CI/CD Pipelines",
-        "SOLID Principles",
-        "Git",
-        "GitHub"
-      ],
-      "url": "https://kapilkuthe.me",
-      "sameAs": [
-        "https://github.com/kapilkkuthe",
-        "https://linkedin.com/in/kapil-kuthe"
-      ]
-    }
-  </script>
 </section>
 
 <style>
@@ -300,6 +339,7 @@
     animation: fadeIn 1.2s ease-out both;
   }
 </style>
+
 <section
   id="skills"
   class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors"
@@ -312,294 +352,355 @@
     </h2>
 
     <div class="space-y-10">
-      <!-- Backend Development -->
+      
       <div>
-        <h3 class="text-xl font-semibold text-amber-600 mb-4">
+        <h3 class="text-xl font-semibold text-amber-800 dark:text-amber-400 mb-4">
           Backend Development
         </h3>
         <div class="space-y-4">
-          <!-- Backend Languages Golang -->
+          
           <div class="mb-4">
             <div class="flex items-center justify-between mb-1">
               <div class="flex items-center space-x-2">
+                
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg"
                   class="w-6 h-6"
-                  alt="Go"
+                  alt="Go (Golang) logo"
                 />
+                
                 <span>Go (Golang)</span>
               </div>
               <span>80%</span>
             </div>
             <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
               <div
-                class="bg-amber-500 h-3 rounded-full"
+                class="bg-amber-600 dark:bg-amber-500 h-3 rounded-full"
                 style="width: 80%"
+                role="progressbar"
+                aria-valuenow="80"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-label="Go (Golang) proficiency level: 80%"
               ></div>
             </div>
           </div>
-          <!-- Backend Languages Java -->
+          
           <div class="mb-4">
             <div class="flex items-center justify-between mb-1">
               <div class="flex items-center space-x-2">
+                
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
                   class="w-6 h-6"
-                  alt="Java"
+                  alt="Java Spring Boot logo"
                 />
+                
                 <span>Java Spring Boot</span>
               </div>
               <span>70%</span>
             </div>
             <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
               <div
-                class="bg-amber-500 h-3 rounded-full"
+                class="bg-amber-600 dark:bg-amber-500 h-3 rounded-full"
                 style="width: 70%"
+                role="progressbar"
+                aria-valuenow="70"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-label="Java Spring Boot proficiency level: 70%"
               ></div>
             </div>
           </div>
+          
         </div>
-        <!-- Backend Technologies Tags-->
+        
+        <!-- Technology Tags -->
         <div class="mt-3 flex flex-wrap gap-2">
+          
           <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >Golang</span
+            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full text-slate-700 dark:text-gray-300"
           >
+            Golang
+          </span>
+          
           <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >Java</span
+            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full text-slate-700 dark:text-gray-300"
           >
+            Java
+          </span>
+          
           <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >Spring Boot</span
+            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full text-slate-700 dark:text-gray-300"
           >
+            Spring Boot
+          </span>
+          
           <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >REST APIs</span
+            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full text-slate-700 dark:text-gray-300"
           >
+            REST APIs
+          </span>
+          
         </div>
       </div>
-
-      <!-- Databases -->
+      
       <div>
-        <h3 class="text-xl font-semibold text-amber-600 mb-4">Databases</h3>
+        <h3 class="text-xl font-semibold text-amber-800 dark:text-amber-400 mb-4">
+          Databases
+        </h3>
         <div class="space-y-4">
-          <!-- PostgreSQL -->
+          
           <div class="mb-4">
             <div class="flex items-center justify-between mb-1">
               <div class="flex items-center space-x-2">
+                
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg"
                   class="w-6 h-6"
-                  alt="PostgreSQL"
+                  alt="PostgreSQL logo"
                 />
+                
                 <span>PostgreSQL</span>
               </div>
               <span>65%</span>
             </div>
             <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
               <div
-                class="bg-amber-500 h-3 rounded-full"
+                class="bg-amber-600 dark:bg-amber-500 h-3 rounded-full"
                 style="width: 65%"
+                role="progressbar"
+                aria-valuenow="65"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-label="PostgreSQL proficiency level: 65%"
               ></div>
             </div>
           </div>
-          <!-- Redis -->
+          
           <div class="mb-4">
             <div class="flex items-center justify-between mb-1">
               <div class="flex items-center space-x-2">
+                
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
                   class="w-6 h-6"
-                  alt="Redis"
+                  alt="Redis logo"
                 />
+                
                 <span>Redis</span>
               </div>
               <span>80%</span>
             </div>
             <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
               <div
-                class="bg-amber-500 h-3 rounded-full"
+                class="bg-amber-600 dark:bg-amber-500 h-3 rounded-full"
                 style="width: 80%"
+                role="progressbar"
+                aria-valuenow="80"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-label="Redis proficiency level: 80%"
               ></div>
             </div>
           </div>
-          <!-- MSSQL -->
+          
           <div class="mb-4">
             <div class="flex items-center justify-between mb-1">
               <div class="flex items-center space-x-2">
+                
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-original-wordmark.svg"
                   class="w-6 h-6"
-                  alt="MSSQL"
+                  alt="MSSQL logo"
                 />
+                
                 <span>MSSQL</span>
               </div>
               <span>70%</span>
             </div>
             <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
               <div
-                class="bg-amber-500 h-3 rounded-full"
+                class="bg-amber-600 dark:bg-amber-500 h-3 rounded-full"
                 style="width: 70%"
+                role="progressbar"
+                aria-valuenow="70"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-label="MSSQL proficiency level: 70%"
               ></div>
             </div>
           </div>
+          
         </div>
-        <!-- Databases Tags-->
+        
+        <!-- Technology Tags -->
         <div class="mt-3 flex flex-wrap gap-2">
+          
           <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >PostgreSQL</span
+            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full text-slate-700 dark:text-gray-300"
           >
+            PostgreSQL
+          </span>
+          
           <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >Redis</span
+            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full text-slate-700 dark:text-gray-300"
           >
+            Redis
+          </span>
+          
           <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >MSSQL</span
+            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full text-slate-700 dark:text-gray-300"
           >
+            MSSQL
+          </span>
+          
           <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >SQL</span
+            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full text-slate-700 dark:text-gray-300"
           >
+            SQL
+          </span>
+          
         </div>
       </div>
-
-      <!-- Tools & DevOps -->
+      
       <div>
-        <h3 class="text-xl font-semibold text-amber-600 mb-4">
-          Tools & DevOps
+        <h3 class="text-xl font-semibold text-amber-800 dark:text-amber-400 mb-4">
+          Tools &amp; DevOps
         </h3>
         <div class="space-y-4">
-          <!-- Docker -->
+          
           <div class="mb-4">
             <div class="flex items-center justify-between mb-1">
               <div class="flex items-center space-x-2">
+                
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg"
                   class="w-6 h-6"
-                  alt="Docker"
+                  alt="Docker logo"
                 />
+                
                 <span>Docker</span>
               </div>
               <span>70%</span>
             </div>
             <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
               <div
-                class="bg-amber-500 h-3 rounded-full"
+                class="bg-amber-600 dark:bg-amber-500 h-3 rounded-full"
                 style="width: 70%"
+                role="progressbar"
+                aria-valuenow="70"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-label="Docker proficiency level: 70%"
               ></div>
             </div>
           </div>
-          <!-- Git -->
+          
           <div class="mb-4">
             <div class="flex items-center justify-between mb-1">
               <div class="flex items-center space-x-2">
+                
                 <img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
                   class="w-6 h-6"
-                  alt="Git"
+                  alt="Git / GitHub logo"
                 />
+                
                 <span>Git / GitHub</span>
               </div>
               <span>80%</span>
             </div>
             <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
               <div
-                class="bg-amber-500 h-3 rounded-full"
+                class="bg-amber-600 dark:bg-amber-500 h-3 rounded-full"
                 style="width: 80%"
+                role="progressbar"
+                aria-valuenow="80"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-label="Git / GitHub proficiency level: 80%"
               ></div>
             </div>
           </div>
-          <!-- Kubernetes -->
+          
           <div class="mb-4">
             <div class="flex items-center justify-between mb-1">
               <div class="flex items-center space-x-2">
+                
                 <div class="flex space-x-1">
+                  
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elasticsearch/elasticsearch-original.svg"
                     class="w-6 h-6"
-                    alt="Elasticsearch"
+                    alt="ELK Stack logo element"
                   />
+                  
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/logstash/logstash-original.svg"
                     class="w-6 h-6"
-                    alt="Logstash"
+                    alt="ELK Stack logo element"
                   />
+                  
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kibana/kibana-original.svg"
                     class="w-6 h-6"
-                    alt="Kibana"
+                    alt="ELK Stack logo element"
                   />
+                  
                 </div>
+                
                 <span>ELK Stack</span>
               </div>
               <span>60%</span>
             </div>
             <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
               <div
-                class="bg-amber-500 h-3 rounded-full"
+                class="bg-amber-600 dark:bg-amber-500 h-3 rounded-full"
                 style="width: 60%"
+                role="progressbar"
+                aria-valuenow="60"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-label="ELK Stack proficiency level: 60%"
               ></div>
             </div>
           </div>
+          
         </div>
-        <!-- Tools & DevOps Tags-->
+        
+        <!-- Technology Tags -->
         <div class="mt-3 flex flex-wrap gap-2">
+          
           <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >Docker</span
+            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full text-slate-700 dark:text-gray-300"
           >
+            Docker
+          </span>
+          
           <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >Git</span
+            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full text-slate-700 dark:text-gray-300"
           >
+            Git
+          </span>
+          
           <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >GitHub</span
+            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full text-slate-700 dark:text-gray-300"
           >
+            GitHub
+          </span>
+          
           <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >ELK Stack</span
+            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full text-slate-700 dark:text-gray-300"
           >
+            ELK Stack
+          </span>
+          
         </div>
       </div>
+      
     </div>
   </div>
-
-  <!-- JSON-LD structured data for SEO -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Kapil Kuthe",
-      "jobTitle": "Backend Developer & DevOps Engineer",
-      "url": "https://kapilkuthe.me",
-      "description": "Experienced backend developer and DevOps engineer specializing in Golang, Java Spring Boot, REST APIs, PostgreSQL, Redis, MSSQL, Docker, Git, GitHub, ELK Stack, and CI/CD workflows.",
-      "knowsAbout": [
-        {
-          "@type": "DefinedTerm",
-          "name": "Backend Development",
-          "description": "Expert in designing and building scalable backend systems using Golang and Java Spring Boot, with strong REST API development skills."
-        },
-        {
-          "@type": "DefinedTerm",
-          "name": "Databases",
-          "description": "Skilled in database design, optimization, and management with PostgreSQL, Redis, MSSQL, and SQL."
-        },
-        {
-          "@type": "DefinedTerm",
-          "name": "DevOps & Tools",
-          "description": "Proficient in containerization, orchestration, and automation using Docker, Git, GitHub, ELK Stack, and CI/CD pipelines."
-        }
-      ],
-      "sameAs": [
-        "https://github.com/kapilkkuthe",
-        "https://linkedin.com/in/kapil-kuthe"
-      ]
-    }
-  </script>
 </section>
 
 <section
@@ -613,173 +714,180 @@
       🚀 Projects
     </h2>
     <div class="space-y-8">
-      <!-- stock-data -->
-      <div class="p-6 border rounded-lg shadow-sm bg-white dark:bg-gray-800">
-        <h3 class="text-xl font-semibold text-amber-600 mb-2">
+      
+      <div class="p-6 border rounded-lg shadow-sm bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 transition duration-200 hover:shadow-md">
+        <h3 class="text-xl font-semibold text-amber-800 dark:text-amber-400 mb-2">
           Stock Data APIs
         </h3>
-        <p class="text-gray-700 dark:text-gray-300 mb-3">
-          Built high-performance stock market APIs using
-          <strong>Golang</strong> and <strong>Nest.js</strong>, leveraging
-          <strong>Redis caching</strong> for faster data access,
-          <strong>Elasticsearch</strong> for real-time trading data delivery,
-          and <strong>PostgreSQL</strong> for data storage.
+        <p class="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+          Built high-performance stock market APIs using <strong>Golang</strong> and <strong>Nest.js</strong>, leveraging <strong>Redis caching</strong> for faster data access, <strong>Elasticsearch</strong> for real-time trading data delivery, and <strong>PostgreSQL</strong> for data storage.
         </p>
-        <div class="flex flex-wrap gap-2">
+        <div class="flex flex-wrap gap-2 mb-4">
+          
           <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >Go (Golang)</span
+            class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
           >
+            Go (Golang)
+          </span>
+          
           <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >Nest.js</span
+            class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
           >
+            Nest.js
+          </span>
+          
           <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >Redis</span
+            class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
           >
+            Redis
+          </span>
+          
           <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >Elasticsearch</span
+            class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
           >
+            Elasticsearch
+          </span>
+          
           <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >PostgreSQL</span
+            class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
           >
+            PostgreSQL
+          </span>
+          
           <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >REST API</span
+            class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
           >
+            REST API
+          </span>
+          
+        </div>
+        <div class="flex gap-4">
+          
+          <a
+            href="https://github.com/kapilkkuthe/stock-data-api"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center text-sm font-semibold text-amber-800 dark:text-amber-400 hover:underline"
+            aria-label="View Stock Data APIs source code on GitHub"
+          >
+            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+            </svg>
+            GitHub Repo
+          </a>
+          
+          
         </div>
       </div>
-
-      <!-- banking -->
-      <div class="p-6 border rounded-lg shadow-sm bg-white dark:bg-gray-800">
-        <h3 class="text-xl font-semibold text-amber-600 mb-2">Banking</h3>
-        <p class="text-gray-700 dark:text-gray-300 mb-3">
-          Designed and deployed secure, scalable <strong>REST APIs</strong> for
-          banking operations using <strong>Go (Fiber).</strong> The APIs feature
-          robust <strong>encryption</strong>, custom middleware for
-          <strong>enhanced validation</strong> and
-          <strong>modularity</strong>,and a streamlined verification process to
-          ensure compliance and security.
-        </p>
-        <div class="flex flex-wrap gap-2">
-          <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >Go (Fiber)</span
-          >
-          <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >Encryption</span
-          >
-          <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >REST API</span
-          >
-          <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >Fintech</span
-          >
-        </div>
-      </div>
-
-      <!-- notification -->
-      <div class="p-6 border rounded-lg shadow-sm bg-white dark:bg-gray-800">
-        <h3 class="text-xl font-semibold text-amber-600 mb-2">
-          Notification & Engagement Service
+      
+      <div class="p-6 border rounded-lg shadow-sm bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 transition duration-200 hover:shadow-md">
+        <h3 class="text-xl font-semibold text-amber-800 dark:text-amber-400 mb-2">
+          Banking REST APIs
         </h3>
-        <p class="text-gray-700 dark:text-gray-300 mb-3">
-          Developed a scalable <strong>SMS/Email microservice</strong> in
-          <strong>Go (Iris)</strong> with <strong>message queues</strong>,
-          improving delivery speed and reliability.
+        <p class="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+          Designed and deployed secure, scalable <strong>REST APIs</strong> for banking operations using <strong>Go (Fiber)</strong>. The APIs feature robust <strong>encryption</strong>, custom middleware for <strong>enhanced validation</strong> and <strong>modularity</strong>, and a streamlined verification process to ensure compliance and security.
         </p>
-        <div class="flex flex-wrap gap-2">
+        <div class="flex flex-wrap gap-2 mb-4">
+          
           <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >Go (Golang)</span
+            class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
           >
+            Go (Fiber)
+          </span>
+          
           <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >Microservices</span
+            class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
           >
+            Encryption
+          </span>
+          
           <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >Message Queues</span
+            class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
           >
+            REST API
+          </span>
+          
           <span
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-            >Email/SMS</span
+            class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
           >
+            Fintech
+          </span>
+          
+        </div>
+        <div class="flex gap-4">
+          
+          <a
+            href="https://github.com/kapilkkuthe/banking-api"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center text-sm font-semibold text-amber-800 dark:text-amber-400 hover:underline"
+            aria-label="View Banking REST APIs source code on GitHub"
+          >
+            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+            </svg>
+            GitHub Repo
+          </a>
+          
+          
         </div>
       </div>
+      
+      <div class="p-6 border rounded-lg shadow-sm bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 transition duration-200 hover:shadow-md">
+        <h3 class="text-xl font-semibold text-amber-800 dark:text-amber-400 mb-2">
+          Notification &amp; Engagement Service
+        </h3>
+        <p class="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+          Developed a scalable <strong>SMS/Email microservice</strong> in <strong>Go (Iris)</strong> with <strong>message queues</strong>, improving delivery speed and reliability.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          
+          <span
+            class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
+          >
+            Go (Golang)
+          </span>
+          
+          <span
+            class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
+          >
+            Microservices
+          </span>
+          
+          <span
+            class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
+          >
+            Message Queues
+          </span>
+          
+          <span
+            class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
+          >
+            Email/SMS
+          </span>
+          
+        </div>
+        <div class="flex gap-4">
+          
+          <a
+            href="https://github.com/kapilkkuthe/notification-service"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center text-sm font-semibold text-amber-800 dark:text-amber-400 hover:underline"
+            aria-label="View Notification &amp; Engagement Service source code on GitHub"
+          >
+            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+            </svg>
+            GitHub Repo
+          </a>
+          
+          
+        </div>
+      </div>
+      
     </div>
   </div>
-
-  <!-- JSON-LD structured data for SEO -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "itemListElement": [
-        {
-          "@type": "SoftwareApplication",
-          "position": 1,
-          "name": "Stock Data APIs",
-          "description": "High-performance stock market APIs built with Golang and Nest.js, featuring Redis caching, Elasticsearch for real-time data, and PostgreSQL for storage.",
-          "applicationCategory": "Finance",
-          "operatingSystem": "Cross-platform",
-          "programmingLanguage": [
-            "Go",
-            "Nest.js",
-            "Redis",
-            "Elasticsearch",
-            "PostgreSQL"
-          ],
-          "keywords": [
-            "Redis",
-            "Elasticsearch",
-            "PostgreSQL",
-            "REST API",
-            "Stock Market"
-          ]
-        },
-        {
-          "@type": "SoftwareApplication",
-          "position": 2,
-          "name": "Banking REST APIs",
-          "description": "Secure, scalable REST APIs for banking operations using Go (Fiber), with encryption, custom middleware for validation and modularity, and compliance-focused verification.",
-          "applicationCategory": "Fintech",
-          "operatingSystem": "Cross-platform",
-          "programmingLanguage": ["Go (Fiber)"],
-          "keywords": [
-            "Encryption",
-            "REST API",
-            "Fintech",
-            "Banking",
-            "Middleware",
-            "Go (Fiber)"
-          ]
-        },
-        {
-          "@type": "SoftwareApplication",
-          "position": 3,
-          "name": "Notification & Engagement Service",
-          "description": "Scalable SMS/Email microservice in Go (Iris) using message queues for improved delivery speed and reliability.",
-          "applicationCategory": "Communication",
-          "operatingSystem": "Cross-platform",
-          "programmingLanguage": ["Go (Iris)"],
-          "keywords": [
-            "Microservices",
-            "Message Queues",
-            "Email",
-            "SMS",
-            "Go (Iris)"
-          ]
-        }
-      ]
-    }
-  </script>
 </section>
 
 <section
@@ -793,198 +901,224 @@
       💼 Experience
     </h2>
 
-    <div class="relative border-l-2 border-amber-500 dark:border-amber-400">
-      <!-- torus-digital -->
-      <div class="mb-10 ml-6 group">
+    <ol class="relative border-l-2 border-amber-600 dark:border-amber-400 list-none p-0 m-0">
+      
+      <li class="mb-10 ml-6 group">
         <span
-          class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-amber-500 rounded-full ring-8 ring-gray-100 dark:ring-gray-900"
+          class="absolute -left-[13px] flex items-center justify-center w-6 h-6 bg-amber-600 dark:bg-amber-500 rounded-full ring-8 ring-gray-50 dark:ring-gray-900"
+          aria-hidden="true"
         ></span>
         <div
-          class="p-6 bg-white dark:bg-gray-800 border rounded-lg shadow-sm transition transform group-hover:scale-[1.02] group-hover:shadow-md"
+          class="p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm transition transform duration-200 group-hover:scale-[1.01] group-hover:shadow-md"
         >
-          <h3 class="text-xl font-semibold text-amber-600">
+          <h3 class="text-xl font-semibold text-amber-800 dark:text-amber-400">
             Software Developer
           </h3>
-          <p class="text-gray-500">
+          <p class="text-slate-500 dark:text-gray-400 font-medium mb-2">
             Torus Digital Pvt. Ltd. | Andheri, Mumbai | Jul 2022 – Present
           </p>
           <ul
-            class="list-disc list-inside text-gray-700 dark:text-gray-300 mt-3 space-y-2"
+            class="list-disc list-inside text-gray-700 dark:text-gray-300 mt-3 space-y-2 leading-relaxed"
           >
-            <li>
-              Built scalable REST APIs (<strong>Java Spring Boot</strong>,
-              <strong>Golang Fiber/Iris</strong>), reducing downtime by 25%.
-            </li>
-            <li>
-              Optimised 80K+ line codebases with
-              <strong>SOLID</strong> principles, cutting build times by 15%.
-            </li>
-            <li>Led backend development for fintech/banking systems.</li>
-            <li>
-              Improved DB performance by 20% with
-              <strong>query tuning + Redis caching</strong>.
-            </li>
-            <li>Enhanced observability with <strong>Grafana + ELK</strong>.</li>
+            
+            <li>Built scalable REST APIs (<strong>Java Spring Boot</strong>, <strong>Golang Fiber/Iris</strong>), reducing system downtime by 25%.</li>
+            
+            <li>Optimized 80K+ line codebases using <strong>SOLID</strong> principles, reducing build times by 15%.</li>
+            
+            <li>Led backend development and integration pipelines for fintech and banking systems.</li>
+            
+            <li>Improved database performance by 20% through <strong>query optimization</strong> and <strong>Redis caching</strong>.</li>
+            
+            <li>Enhanced system observability and diagnostics using <strong>Grafana</strong> and the <strong>ELK Stack</strong>.</li>
+            
           </ul>
-          <div class="mt-3 flex flex-wrap gap-2">
+          <div class="mt-4 flex flex-wrap gap-2">
+            
             <span
-              class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-              >Golang</span
+              class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
             >
+              Golang
+            </span>
+            
             <span
-              class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-              >Spring Boot</span
+              class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
             >
+              Spring Boot
+            </span>
+            
             <span
-              class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-              >Redis</span
+              class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
             >
+              Redis
+            </span>
+            
             <span
-              class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-              >Grafana</span
+              class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
             >
+              Grafana
+            </span>
+            
             <span
-              class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-              >ELK</span
+              class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
             >
+              ELK
+            </span>
+            
           </div>
         </div>
-      </div>
-
-      <!-- barcode-india -->
-      <div class="mb-10 ml-6 group">
+      </li>
+      
+      <li class="mb-10 ml-6 group">
         <span
-          class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-amber-500 rounded-full ring-8 ring-gray-100 dark:ring-gray-900"
+          class="absolute -left-[13px] flex items-center justify-center w-6 h-6 bg-amber-600 dark:bg-amber-500 rounded-full ring-8 ring-gray-50 dark:ring-gray-900"
+          aria-hidden="true"
         ></span>
         <div
-          class="p-6 bg-white dark:bg-gray-800 border rounded-lg shadow-sm transition transform group-hover:scale-[1.02] group-hover:shadow-md"
+          class="p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm transition transform duration-200 group-hover:scale-[1.01] group-hover:shadow-md"
         >
-          <h3 class="text-xl font-semibold text-amber-600">
+          <h3 class="text-xl font-semibold text-amber-800 dark:text-amber-400">
             Software Support Engineer
           </h3>
-          <p class="text-gray-500">
+          <p class="text-slate-500 dark:text-gray-400 font-medium mb-2">
             Barcode India Ltd. | Andheri, Mumbai | Feb 2021 – Jun 2022
           </p>
           <ul
-            class="list-disc list-inside text-gray-700 dark:text-gray-300 mt-3 space-y-2"
+            class="list-disc list-inside text-gray-700 dark:text-gray-300 mt-3 space-y-2 leading-relaxed"
           >
-            <li>Supported pharma clients with 90% satisfaction rate.</li>
-            <li>
-              Resolved backend issues via <strong>SQL</strong>, reducing
-              resolution time by 20%.
-            </li>
-            <li>Collaborated on system improvements for better UX.</li>
-            <li>Delivered on-site & remote technical support.</li>
+            
+            <li>Resolved backend and relational database issues using complex <strong>SQL script diagnostics</strong>, reducing issue resolution time by 20%.</li>
+            
+            <li>Supported pharma clients under strict SLA guidelines, achieving a 90% customer satisfaction score.</li>
+            
+            <li>Collaborated with core engineering teams to deploy bug fixes and optimize system reliability.</li>
+            
+            <li>Delivered on-site and remote technical assistance for enterprise database deployments.</li>
+            
           </ul>
-          <div class="mt-3 flex flex-wrap gap-2">
+          <div class="mt-4 flex flex-wrap gap-2">
+            
             <span
-              class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-              >SQL</span
+              class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
             >
+              SQL
+            </span>
+            
             <span
-              class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-              >Client Support</span
+              class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
             >
+              Technical Support
+            </span>
+            
             <span
-              class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-              >System Maintenance</span
+              class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
             >
+              System Maintenance
+            </span>
+            
           </div>
         </div>
-      </div>
-
-      <!-- aidemtec -->
-      <div class="ml-6 group">
+      </li>
+      
+      <li class="mb-10 ml-6 group">
         <span
-          class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-amber-500 rounded-full ring-8 ring-gray-100 dark:ring-gray-900"
+          class="absolute -left-[13px] flex items-center justify-center w-6 h-6 bg-amber-600 dark:bg-amber-500 rounded-full ring-8 ring-gray-50 dark:ring-gray-900"
+          aria-hidden="true"
         ></span>
         <div
-          class="p-6 bg-white dark:bg-gray-800 border rounded-lg shadow-sm transition transform group-hover:scale-[1.02] group-hover:shadow-md"
+          class="p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm transition transform duration-200 group-hover:scale-[1.01] group-hover:shadow-md"
         >
-          <h3 class="text-xl font-semibold text-amber-600">
-            Customer Support Executive
+          <h3 class="text-xl font-semibold text-amber-800 dark:text-amber-400">
+            Customer Support Executive (QA &amp; Documentation)
           </h3>
-          <p class="text-gray-500">
+          <p class="text-slate-500 dark:text-gray-400 font-medium mb-2">
             Aidemtec Service Pvt. Ltd. | Andheri, Mumbai | Jan 2019 – May 2020
           </p>
           <ul
-            class="list-disc list-inside text-gray-700 dark:text-gray-300 mt-3 space-y-2"
+            class="list-disc list-inside text-gray-700 dark:text-gray-300 mt-3 space-y-2 leading-relaxed"
           >
-            <li>Managed 100+ monthly queries, boosting satisfaction.</li>
-            <li>
-              Performed manual testing, reducing deployment issues by 15%.
-            </li>
-            <li>Maintained/upgraded technical documentation.</li>
-            <li>Delivered training, increasing adoption by 12%.</li>
+            
+            <li>Performed manual and regression testing on client platforms, reducing production deployment issues by 15%.</li>
+            
+            <li>Maintained and upgraded system technical documentation and integration guides.</li>
+            
+            <li>Managed client onboarding technical pipelines and integrations, reducing onboarding friction.</li>
+            
+            <li>Delivered client-facing training sessions, increasing software product adoption by 12%.</li>
+            
           </ul>
-          <div class="mt-3 flex flex-wrap gap-2">
+          <div class="mt-4 flex flex-wrap gap-2">
+            
             <span
-              class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-              >Testing</span
+              class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
             >
+              Testing
+            </span>
+            
             <span
-              class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-              >Documentation</span
+              class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
             >
+              Documentation
+            </span>
+            
             <span
-              class="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded-full"
-              >Training</span
+              class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full text-slate-600 dark:text-gray-300"
             >
+              Client Support
+            </span>
+            
           </div>
         </div>
-      </div>
+      </li>
+      
+    </ol>
+  </div>
+</section>
+
+<section id="contact" class="py-20 text-center bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700 transition-colors">
+  <div class="container mx-auto px-6 max-w-xl">
+    <h2 class="text-3xl font-bold text-slate-800 dark:text-gray-100 mb-4">
+      📬 Get in Touch
+    </h2>
+    <p class="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+      Whether you are looking to hire a Senior Backend Engineer, discuss distributed systems, or just want to connect, feel free to reach out!
+    </p>
+    
+    <div class="mb-8">
+      <a
+        href="mailto:kapil.kuthe@hotmail.com"
+        class="inline-block px-8 py-4 bg-amber-700 hover:bg-amber-800 text-white dark:bg-amber-500 dark:hover:bg-amber-600 dark:text-slate-950 font-bold rounded-lg shadow-md transition duration-200"
+      >
+        kapil.kuthe@hotmail.com
+      </a>
+    </div>
+
+    <div class="flex justify-center gap-6 text-sm font-semibold">
+      <a
+        href="https://github.com/kapilkkuthe"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-slate-600 dark:text-gray-300 hover:text-amber-800 dark:hover:text-amber-400 transition-colors hover:underline"
+      >
+        GitHub
+      </a>
+      <span class="text-gray-300 dark:text-gray-600">|</span>
+      <a
+        href="https://linkedin.com/in/kapil-kuthe"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-slate-600 dark:text-gray-300 hover:text-amber-800 dark:hover:text-amber-400 transition-colors hover:underline"
+      >
+        LinkedIn
+      </a>
     </div>
   </div>
-
-  <!-- JSON-LD structured data for SEO -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Kapil Kuthe",
-      "hasOccupation": [
-        {
-          "@type": "Occupation",
-          "name": "Software Developer",
-          "description": "Built REST APIs (Spring Boot, Golang), improved DB with Redis, enhanced observability with Grafana + ELK.",
-          "startDate": "2022-07",
-          "hiringOrganization": {
-            "@type": "Organization",
-            "name": "Torus Digital Pvt. Ltd."
-          }
-        },
-        {
-          "@type": "Occupation",
-          "name": "Software Support Engineer",
-          "description": "Supported pharma clients, resolved SQL issues, improved uptime.",
-          "startDate": "2021-02",
-          "endDate": "2022-06",
-          "hiringOrganization": {
-            "@type": "Organization",
-            "name": "Barcode India Ltd."
-          }
-        },
-        {
-          "@type": "Occupation",
-          "name": "Customer Support Executive",
-          "description": "Managed queries, performed testing, maintained documentation, delivered client training.",
-          "startDate": "2019-01",
-          "endDate": "2020-05",
-          "hiringOrganization": {
-            "@type": "Organization",
-            "name": "Aidemtec Service Pvt. Ltd."
-          }
-        }
-      ]
-    }
-  </script>
 </section>
 
 
     </main>
 
     <footer class="p-4 text-center text-sm bg-gray-100 dark:bg-gray-900 mt-10">
-  ©2025 Kapil Kuthe
+  ©2026 Kapil Kuthe
 </footer>
 
 

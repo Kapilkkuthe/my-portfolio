@@ -6,12 +6,11 @@
     <!-- Profile Image -->
     <div class="flex justify-center mb-6">
       <img
-        src="/assets/img/profile.png"
-        alt="Kapil Kuthe"
+        src="/assets/img/profile.webp"
+        alt="Kapil Kuthe - Senior Backend Developer"
         class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white object-cover shadow-lg mb-6 dark:border-gray-800 -mt-20"
-        oncontextmenu="return false;"
-        draggable="false"
-        loading="lazy"
+        loading="eager"
+        fetchpriority="high"
         decoding="async"
       />
     </div>
@@ -32,7 +31,7 @@
     </p>
 
     <!-- Rotating Roles -->
-    <div class="text-xl md:text-2xl font-semibold text-amber-600 h-10 mb-6">
+    <div class="text-xl md:text-2xl font-semibold text-amber-800 dark:text-amber-400 h-10 mb-6">
       <span id="role-rotator" class="inline-block"></span>
     </div>
 
@@ -69,7 +68,7 @@
     <div class="space-x-4 flex flex-wrap justify-center gap-4">
       <a
         href="#projects"
-        class="px-6 py-3 bg-amber-500 text-white rounded-lg shadow hover:bg-amber-600 transition"
+        class="px-6 py-3 bg-amber-700 text-white rounded-lg shadow hover:bg-amber-800 dark:bg-amber-500 dark:text-slate-950 dark:hover:bg-amber-600 transition font-medium"
         >View Projects</a
       >
       <a
@@ -118,40 +117,6 @@
       showRole();
       setInterval(showRole, 2500);
     });
-  </script>
-
-  <!-- JSON-LD for SEO -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Kapil Kuthe",
-      "jobTitle": "Backend Developer",
-      "description": "Brewing Secure APIs for the Future of Fintech ☕ | Backend Developer in Fintech using Go, Java Spring Boot, Redis, PostgreSQL, Docker",
-      "skills": [
-        "Backend",
-        "Fintech",
-        "Curious",
-        "Go",
-        "Java Spring Boot",
-        "Redis",
-        "PostgreSQL",
-        "Docker",
-        "REST APIs",
-        "Microservices",
-        "ELK Stack",
-        "Grafana",
-        "CI/CD Pipelines",
-        "SOLID Principles",
-        "Git",
-        "GitHub"
-      ],
-      "url": "https://kapilkuthe.me",
-      "sameAs": [
-        "https://github.com/kapilkkuthe",
-        "https://linkedin.com/in/kapil-kuthe"
-      ]
-    }
   </script>
 </section>
 

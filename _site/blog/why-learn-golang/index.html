@@ -2,27 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Why Go is Powering the Future of Software (And Why You Should Learn It Now)</title>
+    <meta name="description" content="Go (Golang) has grown from a Google project to the backbone of systems like Docker, Kubernetes, and Uber. Here’s why it matters." />
+    <link rel="canonical" href="https://kapilkuthe.me/blog/why-learn-golang/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kapilkuthe.me/blog/why-learn-golang/" />
+    <meta property="og:title" content="Why Go is Powering the Future of Software (And Why You Should Learn It Now)" />
+    <meta property="og:description" content="Go (Golang) has grown from a Google project to the backbone of systems like Docker, Kubernetes, and Uber. Here’s why it matters." />
+    <meta property="og:image" content="https://kapilkuthe.me/assets/img/profile.webp" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://kapilkuthe.me/blog/why-learn-golang/" />
+    <meta property="twitter:title" content="Why Go is Powering the Future of Software (And Why You Should Learn It Now)" />
+    <meta property="twitter:description" content="Go (Golang) has grown from a Google project to the backbone of systems like Docker, Kubernetes, and Uber. Here’s why it matters." />
+    <meta property="twitter:image" content="https://kapilkuthe.me/assets/img/profile.webp" />
+
     <link rel="stylesheet" href="/assets/css/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    
   </head>
   <body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-amber-500 focus:text-white">Skip to main content</a>
     <!-- Header & Navigation -->
 <header
   class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm dark:bg-gray-900/80 transition-colors"
 >
   <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
     <!-- Logo / Title -->
-    <h1 class="text-2xl font-bold text-slate-800 dark:text-gray-100">
+    <div class="text-2xl font-bold text-slate-800 dark:text-gray-100">
       <a href="/" aria-label="Kapil Kuthe">Kapil Kuthe</a>
-    </h1>
+    </div>
 
     <!-- Desktop Nav -->
     <div class="flex items-center space-x-8">
@@ -126,9 +144,52 @@
 </header>
 
 
-    <main class="mx-auto max-w-5xl px-6">
-      <h1>Why Go is Powering the Future of Software (And Why You Should Learn It Now)</h1>
-<p>In the ever-evolving landscape of software development, choosing the right programming language can feel like navigating a maze. New languages emerge, old ones adapt, and the pressure to pick the &quot;best&quot; tool for the job is immense. Yet, over the last decade, one language has quietly risen from a niche project at Google to a dominant force in modern computing: <strong>Go (or Golang).</strong></p>
+    <main id="main-content" class="mx-auto max-w-5xl px-6">
+      <div class="py-12">
+  <!-- Back Link -->
+  <div class="max-w-3xl mx-auto mb-6">
+    <a
+      href="/blog/"
+      class="inline-flex items-center text-sm font-semibold text-amber-800 dark:text-amber-400 hover:underline"
+      aria-label="Back to all blog posts"
+    >
+      <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+      </svg>
+      Back to Blog
+    </a>
+  </div>
+
+  <!-- Main Article Card -->
+  <article class="max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden p-8 md:p-12 transition-colors">
+    <!-- Post Header -->
+    <header class="mb-8 pb-8 border-b border-gray-100 dark:border-gray-700">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-slate-800 dark:text-gray-100 mb-4 leading-tight">
+        Why Go is Powering the Future of Software (And Why You Should Learn It Now)
+      </h1>
+      
+      <div class="flex flex-wrap items-center justify-between gap-4 text-sm text-gray-500 dark:text-gray-400">
+        <div class="flex items-center space-x-2">
+          <span>By <strong>Kapil Kuthe</strong></span>
+          <span>•</span>
+          <time datetime="2025-09-10">
+            September 10, 2025
+          </time>
+        </div>
+        
+        
+        <div class="flex flex-wrap gap-2">
+          
+          
+          
+        </div>
+        
+      </div>
+    </header>
+
+    <!-- Blog Content -->
+    <div class="prose lg:prose-lg dark:prose-invert max-w-none leading-relaxed text-slate-700 dark:text-gray-300">
+      <p>In the ever-evolving landscape of software development, choosing the right programming language can feel like navigating a maze. New languages emerge, old ones adapt, and the pressure to pick the &quot;best&quot; tool for the job is immense. Yet, over the last decade, one language has quietly risen from a niche project at Google to a dominant force in modern computing: <strong>Go (or Golang).</strong></p>
 <p>If you're a developer looking to future-proof your skills, a manager aiming for more efficient systems, or just curious about what powers giants like Docker, Kubernetes, and Uber, you've come to the right place. This article isn't just about what Go is; it's about why it matters and how it's solving some of the most complex challenges in technology today.</p>
 <hr>
 <h2>What Exactly is Go? A Quick Refresher</h2>
@@ -184,10 +245,42 @@ The syntax is beginner-friendly, and once you understand <strong>goroutines &amp
 <p>By learning Go, you’re not just adding another tool. You’re <strong>investing in the future of cloud computing and backend infrastructure.</strong></p>
 <p>👉 So, what are you waiting for? Check out the <a href="https://go.dev/tour/">Tour of Go</a> and start your journey today!</p>
 
+    </div>
+
+    <!-- Footer -->
+    <footer
+      class="mt-12 border-t border-gray-100 dark:border-gray-700 pt-6 text-sm text-gray-500 dark:text-gray-400 flex flex-wrap justify-between items-center gap-4"
+    >
+      <span>© 2026 Kapil Kuthe — Opinions are my own.</span>
+      <a href="#main-content" class="hover:text-amber-800 dark:hover:text-amber-400 transition-colors">Back to top ↑</a>
+    </footer>
+  </article>
+</div>
+
+<!-- SEO: JSON-LD -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Why Go is Powering the Future of Software (And Why You Should Learn It Now)",
+    "datePublished": "2025-09-10",
+    "dateModified": "2025-09-10",
+    "author": {
+      "@type": "Person",
+      "name": "Kapil Kuthe"
+    },
+    "description": "Go (Golang) has grown from a Google project to the backbone of systems like Docker, Kubernetes, and Uber. Here’s why it matters.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "/blog/why-learn-golang/"
+    }
+  }
+</script>
+
     </main>
 
     <footer class="p-4 text-center text-sm bg-gray-100 dark:bg-gray-900 mt-10">
-  ©2025 Kapil Kuthe
+  ©2026 Kapil Kuthe
 </footer>
 
 

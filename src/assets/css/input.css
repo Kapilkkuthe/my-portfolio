@@ -16,7 +16,11 @@ html {
 
 /* Add to theme variables section */
 :root {
-  --nav-active: #f59e0b; /* amber-500 */
+  --nav-active: #92400e; /* amber-800 for high contrast on light bg (5.7:1) */
+}
+
+.dark {
+  --nav-active: #f59e0b; /* amber-500 for high contrast on dark bg (7.0:1) */
 }
 
 .nav-link.active::after {

@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Stock Data APIs",
+    "description": "Built high-performance stock market APIs using <strong>Golang</strong> and <strong>Nest.js</strong>, leveraging <strong>Redis caching</strong> for faster data access, <strong>Elasticsearch</strong> for real-time trading data delivery, and <strong>PostgreSQL</strong> for data storage.",
+    "tech": ["Go (Golang)", "Nest.js", "Redis", "Elasticsearch", "PostgreSQL", "REST API"],
+    "github": "https://github.com/kapilkkuthe/stock-data-api",
+    "demo": ""
+  },
+  {
+    "title": "Banking REST APIs",
+    "description": "Designed and deployed secure, scalable <strong>REST APIs</strong> for banking operations using <strong>Go (Fiber)</strong>. The APIs feature robust <strong>encryption</strong>, custom middleware for <strong>enhanced validation</strong> and <strong>modularity</strong>, and a streamlined verification process to ensure compliance and security.",
+    "tech": ["Go (Fiber)", "Encryption", "REST API", "Fintech"],
+    "github": "https://github.com/kapilkkuthe/banking-api",
+    "demo": ""
+  },
+  {
+    "title": "Notification & Engagement Service",
+    "description": "Developed a scalable <strong>SMS/Email microservice</strong> in <strong>Go (Iris)</strong> with <strong>message queues</strong>, improving delivery speed and reliability.",
+    "tech": ["Go (Golang)", "Microservices", "Message Queues", "Email/SMS"],
+    "github": "https://github.com/kapilkkuthe/notification-service",
+    "demo": ""
+  }
+]

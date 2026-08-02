@@ -1,7 +1,8 @@
-# 🚀 Kapil Kuthe – Portfolio & Blog
+# 🚀 Kapil Kuthe – Senior Backend Developer Portfolio & Blog
 
-A personal **portfolio website + technical blog** built with [**Eleventy (11ty)**](https://www.11ty.dev/), **TailwindCSS**, and **@tailwindcss/typography**.  
-Showcasing **backend projects, fintech experience, and blogs** on Go, Java, and modern development.
+A personal **portfolio website + technical blog** built with [**Eleventy (11ty)**](https://www.11ty.dev/) and **TailwindCSS** (v3). It showcases **backend projects, fintech/banking experience, and blogs** on Go, Java, and modern distributed systems.
+
+Designed with a clean, production-grade architecture focusing on **recruiter conversion, Core Web Vitals performance, SEO optimization, and WCAG 2.2 AA accessibility standards**.
 
 ---
 
@@ -10,166 +11,145 @@ Showcasing **backend projects, fintech experience, and blogs** on Go, Java, and 
 ```
 my-portfolio/
 ├── src/
-│   ├── _includes/         # Nunjucks layouts & partials
-│   │   ├── base.njk       # Global site layout (header/footer)
-│   │   ├── blog.njk       # Blog post layout
-│   │   ├── header.njk     # Header / Navigation
-│   │   └── footer.njk     # Footer
-│   ├── assets/            # CSS, JS, resume, images
+│   ├── _data/             # Content data files (separates data from markup)
+│   │   ├── site.json      # Global site metadata (author, social links, base URL)
+│   │   ├── skills.json    # Skill levels, categories, and devicon SVGs
+│   │   ├── projects.json  # Projects list, tech stacks, and GitHub links
+│   │   └── experience.json# Chronological timeline details
+│   ├── _includes/         # Nunjucks layouts & template partials
+│   │   ├── base.njk       # Core HTML layout shell (metadata, analytics, scripts)
+│   │   ├── blog.njk       # Chained layout for blog articles
+│   │   ├── header.njk     # Navigation and Dark/Light toggle
+│   │   ├── footer.njk     # Dynamic copyright footer
+│   │   ├── hero.njk       # Welcome banner, typing script, and eager avatar load
+│   │   ├── skills.njk     # Dynamic loops for semantic progress bars
+│   │   ├── projects.njk   # Dynamic loops for projects with source links
+│   │   ├── experience.njk # Semantic timeline timeline list
+│   │   └── contact.njk    # Styled call-to-action contact portals
+│   ├── assets/            # CSS stylesheets, JS scripts, resume file, images
+│   │   ├── css/
+│   │   │   ├── input.css  # Source CSS with Tailwind directives & contrast overrides
+│   │   │   └── style.css  # Pre-compiled production Tailwind stylesheet
+│   │   ├── img/
+│   │   │   └── profile.webp # Optimized eagerly loaded avatar image
+│   │   └── js/
+│   │       └── main.js    # LocalStorage theme management & active scrollspy
 │   ├── blog/              # Blog index + posts
-│   │   ├── index.njk      # Blog index page with pagination
-│   │   └── why-learn-golang.md # Example post
-│   └── index.md           # Landing page (hero, skills, projects, etc.)
-├── tailwind.config.js     # Tailwind config with typography plugin
-├── postcss.config.js      # PostCSS config
-├── package.json           # Scripts & dependencies
-└── .eleventy.js           # Eleventy config (shortcodes, dirs, etc.)
+│   │   ├── index.njk      # Blog list page with pagination
+│   │   └── why-learn-golang.md # Example blog post markdown
+│   ├── robots.njk         # Dynamic robots.txt generation
+│   └── sitemap.njk        # Dynamic XML sitemap generation
+├── tailwind.config.js     # Tailwind CSS design system rules
+├── postcss.config.js      # PostCSS directives
+├── package.json           # Dependencies and build pipelines
+└── .eleventy.js           # Eleventy configuration (passthroughs, filters, shortcodes)
 ```
 
 ---
 
 ## ⚙️ Setup & Installation
 
-1. **Clone the repo**
-    ```bash
-    git clone https://github.com/your-username/my-portfolio.git
-    cd my-portfolio
-    ```
+> [!NOTE]
+> This project requires **Node.js v18+** to compile Eleventy (v3) templates from scratch. 
 
-2. **Install dependencies**
-    ```bash
-    npm install
-    ```
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/kapilkkuthe/my-portfolio.git
+   cd my-portfolio
+   ```
 
-3. **Run locally with hot reload**
-    ```bash
-    npm run dev
-    ```
-    Visit → [http://localhost:8080](http://localhost:8080)
+2. **Install node dependencies:**
+   ```bash
+   npm install
+   ```
 
-4. **Build for production**
-    ```bash
-    npm run build
-    ```
-    Output → `_site/`
+3. **Run local development server with hot reloading:**
+   ```bash
+   npm run dev
+   ```
+   Open → [http://localhost:8080](http://localhost:8080)
 
----
-
-## 🛠️ Tech Stack
-
-- **Eleventy** – Static site generator
-- **TailwindCSS** – Utility-first CSS framework
-- **@tailwindcss/typography** – Beautiful prose for blog posts
-- **Nunjucks** – Layouts & includes
-- **Chart.js** – Skill graphs & visualizations
+4. **Build production static assets:**
+   ```bash
+   npm run build
+   ```
+   Built HTML/assets compile into the `_site/` directory.
 
 ---
 
-## ✨ Features
+## 🛠️ Tech Stack & Dependencies
 
-- 🌙 Dark/Light mode toggle
-- 👨‍💻 Hero section with typing effect + tagline
-- 📊 Skills section with icons & progress bars
-- 📂 Projects section with categorized cards
-- 🏢 Experience timeline with hover effects
-- ✍️ Blog system with SEO optimization
-- 📑 Resume download link
-- 🔎 SEO optimized (meta, schema, JSON-LD)
+* **Eleventy (11ty)** – Static site builder
+* **TailwindCSS (v3)** – Utility CSS framework
+* **@tailwindcss/typography** – Fenced prose for readable blog posts
+* **Nunjucks** – Templating engine & partial imports
 
 ---
 
-## 📝 Writing a Blog Post
+## ✨ Production-Grade Features
 
-1. **Create a new Markdown file in `src/blog/`:**
-    ```
-    src/blog/my-first-post.md
-    ```
+* **Data-Driven Architecture:** Project details, skills, and experience items are decoupled into JSON databases under `src/_data/`, allowing quick updates without changing template layouts.
+* **WCAG 2.2 AA Compliance:**
+  * Strict viewport scaling allows user zooming.
+  * Contrast ratio >= 4.5:1 on light background elements using high-contrast Amber colors.
+  * Skip-to-content links focusable by keyboard tab commands.
+  * Semantic elements (`<ol>`, `<li>`, progress bar roles) for screen reader accessibility.
+* **Performance Tuning (Core Web Vitals):**
+  * Avatar converted to WebP formats, set to `eager` loading, and configured with `fetchpriority="high"`.
+  * Removed unused render-blocking external libraries (`Chart.js`).
+* **SEO Excellence:**
+  * Meta descriptions, OG tags, canonical URLs, and dynamic Person JSON-LD schemas.
+  * Correct heading flows (retained single `h1` headings).
+  * Auto-generated `sitemap.xml` and `robots.txt` templates.
+* **Recruiter Call-to-Actions:** Accessible resume download links and high-contrast email contact panels.
 
-2. **Add front matter:**
-    ```yaml
-    ---
-    layout: blog.njk
-    title: "My First Blog Post"
-    date: 2025-09-15
-    tags: post
-    description: "Short description for SEO"
-    author: "Kapil Kuthe"
-    ---
-    ```
+---
 
-3. **Write your post in Markdown.**  
-   Eleventy + Tailwind Typography = clean, professional blog layout.
+## 📝 Modifying Content & Writing Posts
+
+### Editing Portfolio Sections
+Modify text lists directly by changing files in the data directory:
+* **Add a Skill:** Modify `src/_data/skills.json`
+* **Add a Project:** Modify `src/_data/projects.json` (include Title, description, tags, and GitHub repo link)
+* **Add Jobs:** Modify `src/_data/experience.json`
+
+### Creating a Blog Post
+1. Create a new markdown file under `src/blog/`:
+   `src/blog/my-new-article.md`
+2. Add metadata front matter:
+   ```yaml
+   ---
+   layout: blog.njk
+   title: "My New Article Title"
+   date: 2026-08-02
+   tags: post
+   description: "Enter SEO summary description"
+   author: "Kapil Kuthe"
+   ---
+   ```
+3. Write the article in standard Markdown format below the front matter divider.
 
 ---
 
 ## 📬 Deployment
 
-Static build — deploy anywhere:
+Since the compilation produces plain static assets, the folder `_site/` can be instantly deployed on static hosts like **Netlify, Vercel, or GitHub Pages**.
 
-- **Vercel**
-- **Netlify**
-- **GitHub Pages**
-
-**Example (Netlify):**
-```bash
-npm run build
-# deploy _site folder
-```
-
----
-
-## 🤝 Contributing Guide
-
-Want to improve this repo? Contributions are welcome!
-
-1. Fork the repo
-2. Create a new branch (`feature/your-feature`)
-3. Commit your changes
-4. Push your branch
-5. Open a Pull Request
-
-**Contribution Ideas:**
-
-- Improve UI/UX (animations, accessibility, performance)
-- Add new blog posts (tech, fintech, backend topics)
-- Enhance SEO and meta tags
-- Add new skill or project cards
-- Fix bugs in layout or styling
+**Example (Netlify Settings):**
+* Build command: `npm run build`
+* Publish directory: `_site`
 
 ---
 
 ## 👤 Author
 
 **Kapil Kuthe**  
-Backend Developer (Go, Java Spring Boot, Fintech APIs)  
-[GitHub](https://github.com/kapilkuthe) | [LinkedIn](https://linkedin.com/in/kapilkuthe)
+*Senior Backend Developer (Go, Java Spring Boot, Fintech APIs)*  
+* [GitHub](https://github.com/kapilkkuthe)
+* [LinkedIn](https://linkedin.com/in/kapil-kuthe)
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License — you are free to use, modify, and distribute it with attribution.
-
-```
-MIT License
-
-Copyright (c) 2025 Kapil Kuthe
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
+MIT License. Feel free to clone, edit, and use with attribution.
